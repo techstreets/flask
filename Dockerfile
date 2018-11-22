@@ -10,6 +10,8 @@ RUN yum install -y python36
 RUN curl -fsSL https://bootstrap.pypa.io/get-pip.py | python36 -
 RUN pip3 install --upgrade pip
 
+ENV LANG en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
 ENV GUNICORN_VERSION 19.9.0
 ENV FLASK_VERSION 1.0.2
 ENV PYTHONDONTWRITEBYTECODE true

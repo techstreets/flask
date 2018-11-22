@@ -1,5 +1,5 @@
 IMAGE_NAME := techstreets/flask
-IMAGE_TAG := 0.0.2
+IMAGE_TAG := 0.0.3
 CONTAINER_NAME := flask_app
 ENV_FILE_NAME := flask_app_env
 HOST_PORT := 8000
