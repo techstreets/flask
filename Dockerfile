@@ -25,11 +25,9 @@ RUN pip install flask==${FLASK_VERSION}
 COPY ./requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt
 
-COPY ./gunicorn/gunicorn_config.py /tmp
-
 WORKDIR ${APP_ROOT}
 VOLUME ${APP_ROOT}
 
 EXPOSE 8000
 
-CMD /usr/local/bin/gunicorn --config=/tmp/gunicorn_config.py src.app:app
+CMD /usr/local/bin/gunicorn --config=${APP_ROOT}/gunicorn/gunicorn_config.py src.app:app

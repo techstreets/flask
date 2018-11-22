@@ -11,7 +11,7 @@ def num_cpus():
     return cpus or 3
 
 
-name = 'django'
+name = 'flask'
 bind = '0.0.0.0:8000'
 workers = num_cpus() * 2 + 1
 debug = True
