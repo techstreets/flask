@@ -14,6 +14,7 @@ ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 ENV GUNICORN_VERSION 19.9.0
 ENV FLASK_VERSION 1.0.2
+ENV FLASK_CORS_VERSION 3.0.7
 ENV PYTHONDONTWRITEBYTECODE true
 ENV APP_ROOT /opt/app
 # Create working dir
@@ -22,6 +23,7 @@ RUN mkdir -p ${APP_ROOT}
 # install gunicorn & flask
 RUN pip install gunicorn==${GUNICORN_VERSION}
 RUN pip install flask==${FLASK_VERSION}
+RUN pip install flask-cors==${FLASK_CORS_VERSION}
 
 # install all project defined dependencies
 COPY ./requirements.txt /tmp
